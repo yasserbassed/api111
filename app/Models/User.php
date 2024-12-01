@@ -36,9 +36,15 @@ class User extends Authenticatable
      */
     protected $hidden = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'password',
 =======
        // 'password',
+=======
+       // 'password',
+=======
+        'password',
+>>>>>>> d740fb6 (TASTING1)
 >>>>>>> origin/main
         'remember_token',
     ];
