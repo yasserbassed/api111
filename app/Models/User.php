@@ -4,8 +4,11 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+=======
+>>>>>>> origin/main
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -32,7 +35,11 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
+<<<<<<< HEAD
         'password',
+=======
+       // 'password',
+>>>>>>> origin/main
         'remember_token',
     ];
 
@@ -48,6 +55,7 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+<<<<<<< HEAD
     public function level(): BelongsTo
         {
         return $this->belongsTo(level::class);
@@ -55,4 +63,6 @@ class User extends Authenticatable
 
 
 
+=======
+>>>>>>> origin/main
 }
