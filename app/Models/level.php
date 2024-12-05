@@ -15,6 +15,4 @@ class level extends Model
     {
         return $this->hasOne(user::class,'level_id');
     }
-
-
 }
