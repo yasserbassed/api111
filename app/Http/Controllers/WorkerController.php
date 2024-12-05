@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\worker;
 use App\Http\Requests\StoreworkerRequest;
 use App\Http\Requests\UpdateworkerRequest;
+use App\Models\worker;
 
 class WorkerController extends Controller
 {

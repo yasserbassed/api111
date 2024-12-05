@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\level;
 use App\Http\Requests\StorelevelRequest;
 use App\Http\Requests\UpdatelevelRequest;
+use App\Models\level;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class LevelController extends Controller
 {
@@ -19,9 +21,28 @@ class LevelController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $validated = Validator::make($request->all(), [
+            'level' => 'required|string|max:255',
+        ]);
+        if ($validated->failed()) {
+            return response()->json($validated->errors(), 422);
+        }
+        try {
+            $levels = Level::create([
+                'level' => $request->level,
+            ]);
+
+            return response()->json([
+                'level' => $levels,
+            ], 200);
+        } catch (\Throwable $exception) {
+
+            return response()->json([
+                'error' => $exception->getMessage(),
+            ], 403);
+        }
     }
 
     /**

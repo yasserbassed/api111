@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\poster;
 use App\Http\Requests\StoreposterRequest;
 use App\Http\Requests\UpdateposterRequest;
+use App\Models\poster;
 
 class PosterController extends Controller
 {

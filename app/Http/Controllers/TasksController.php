@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\tasks;
 use App\Http\Requests\StoretasksRequest;
 use App\Http\Requests\UpdatetasksRequest;
+use App\Models\tasks;
 
 class TasksController extends Controller
 {
